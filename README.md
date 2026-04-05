@@ -56,11 +56,11 @@ When you run Terraform, it automatically:
 ```Bash
 terraform init
 
-### 2. Preview infrastructure changes
+2. Preview infrastructure changes
 
 terraform plan
 
-### 3. Deploy infrastructure
+3. Deploy infrastructure
 
 terraform apply
 Type yes when prompted.
