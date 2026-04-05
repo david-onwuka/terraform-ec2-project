@@ -64,6 +64,7 @@ terraform plan
 ```Bash
 terraform apply
 Type yes when prompted.
+```
 
 ## Access the Application
 Open in browser:
