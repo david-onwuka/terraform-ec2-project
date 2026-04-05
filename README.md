@@ -106,5 +106,6 @@ Deploy same app using Kubernetes
 
 ## Author
 David Onwuka
+
 Aspiring DevOps Engineer
 
