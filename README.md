@@ -70,6 +70,7 @@ Type yes when prompted.
 Open in browser:
 
 http://<public-ip>
+
 Note: The public IP changes when the instance is recreated unless you have an Elastic IP.
 
 
