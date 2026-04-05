@@ -53,7 +53,7 @@ When you run Terraform, it automatically:
 
 ## How to Deploy
 ### 1. Initialize Terraform
-```bash
+```Bash
 terraform init
 
 ### 2. Preview infrastructure changes
