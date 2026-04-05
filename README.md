@@ -57,15 +57,15 @@ When you run Terraform, it automatically:
 terraform init
 
 ### 2. Preview infrastructure changes
-Bash
+```Bash
 terraform plan
 
 ### 3. Deploy infrastructure
-Bash
+```Bash
 terraform apply
 Type yes when prompted.
 
-# Access the Application
+## Access the Application
 Open in browser:
 
 http://<public-ip>
