@@ -69,7 +69,7 @@ Type yes when prompted.
 ## Access the Application
 Open in browser:
 
-http://<public-ip>
+http://3.85.30.71
 
 Note: The public IP changes when the instance is recreated unless you have an Elastic IP.
 
