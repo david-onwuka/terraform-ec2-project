@@ -30,7 +30,8 @@ The goal is to showcase real-world DevOps practices including cloud provisioning
 ---
 
 ## Project Structure
-terraform-ec2-project/ ├── main.tf ├── .gitignore ├── .terraform.lock.hcl └── README.md
+terraform-ec2-project/ ├── main.tf ├── .gitignore 
+├── .terraform.lock.hcl └── README.md
 
 ## What This Project Does
 
@@ -68,10 +69,10 @@ Type yes when prompted.
 Open in browser:
 
 http://<public-ip>
-you your public IP given, public IP does change as given not static.
+Note: The public IP changes when the instance is recreated unless you have an Elastic IP.
 
 
-# Key DevOps Concepts Practiced
+## Key DevOps Concepts Practiced
 
 Infrastructure as Code (IaC)
 
@@ -87,7 +88,7 @@ Version control with Git & GitHub
 
 Automated server bootstrapping
 
-# Future Improvements
+## Future Improvements
 
 Add Elastic IP for static public address
 
@@ -101,7 +102,7 @@ Implement CI/CD pipeline using GitHub Actions
 
 Deploy same app using Kubernetes
 
-# Author
+## Author
 David Onwuka
 Aspiring DevOps Engineer
 
