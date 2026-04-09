@@ -1,5 +1,8 @@
 # Terraform AWS EC2 + Docker Nginx Deployment
 
+## Project Architecture
+ ![Architecture](architecture.png.jpeg)
+
 ## Project Overview
 
 This project demonstrates Infrastructure as Code (IaC) using Terraform to automate the deployment of an AWS EC2 instance running a Dockerized Nginx web server.
