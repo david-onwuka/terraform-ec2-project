@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "web_sg" {
-  name = "web-sg-v3"
+  name = "web-sg-v4"
 
   ingress {
     from_port   = 22
