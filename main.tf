@@ -44,6 +44,7 @@ resource "aws_instance" "web" {
 
   tags = {
     Name = "terraform-devops-web"
+    project = "single-instance"
   }
 }
 
