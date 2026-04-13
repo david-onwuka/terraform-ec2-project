@@ -12,7 +12,7 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSECRETACCESSKEY }}
-      AWS_DEFAULT_REGION: us-east-1
+      AWS_REGION: us-east-1
 
     steps:
       - name: Checkout code
@@ -27,8 +27,8 @@ jobs:
       - name: Terraform Validate
         run: terraform validate
 
+      - name: Terraform Plan
+        run: terraform plan
+
       - name: Terraform Apply
         run: terraform apply -auto-approve
-
-   t   - name: Terraform Plan
-        run: terraform plan
