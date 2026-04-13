@@ -3,7 +3,8 @@ provider "aws" {
 }
 
 resource "aws_security_group" "web_sg" {
-  name = "web-sg-v4"
+  name        = "web-sg-unique"
+  description = "Allow SSH and HTTP"
 
   ingress {
     from_port   = 22
@@ -29,10 +30,11 @@ resource "aws_security_group" "web_sg" {
 
 resource "aws_instance" "web" {
   ami           = "ami-0c02fb55956c7d316"
-  instance_type = var.instance_type
+  instance_type = "t2.micro"
+
   key_name = "terraform-key1"
 
-  security_groups = [aws_security_group.web_sg.name]
+  security_groups = ["Web-sg-unique"]
 
   user_data = <<-EOF
               #!/bin/bash
