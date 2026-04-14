@@ -39,8 +39,10 @@ resource "aws_instance" "web" {
   user_data = <<-EOF
               #!/bin/bash
               yum update -y
-              amazon-linux-extras install docker -y
-              service docker start
+              yum install -y docker
+              systemctl enable docker
+              systemctl start docker
+              sleep 10
               docker run -d -p 80:80 nginx
               EOF
 
