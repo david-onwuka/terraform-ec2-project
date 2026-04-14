@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "web_sg" {
-  name        = "web-sg-unique-v2"
+  name        = "web-sg-unique"
   description = "Allow SSH and HTTP"
 
   ingress {
