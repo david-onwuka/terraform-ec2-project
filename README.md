@@ -1,4 +1,4 @@
-# Infrastructure as Cod (IaC): AWS EC2 Deployment with Terraform, Docker, and Nginx
+# Infrastructure as Code (IaC): AWS EC2 Deployment with Terraform, Docker, and Nginx
 
 ## Screenshots
  ### CI/CD Pipeline
