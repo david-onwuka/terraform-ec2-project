@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "web_sg" {
-  name        = "web-sg-unique"
+  name        = "web-sg-unique-v2"
   description = "Allow SSH and HTTP"
 
   ingress {
@@ -45,7 +45,7 @@ resource "aws_instance" "web" {
               EOF
 
   tags = {
-    Name = "terraform-devops-web"
+    Name    = "terraform-devops-web"
     project = "single-instance"
   }
 }
