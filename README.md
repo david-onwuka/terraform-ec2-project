@@ -2,7 +2,10 @@
 
 ## Screenshots
  ### CI/CD Pipeline
- ![CI/CD Pipeline](github-action-success.jpeg.png)
+ ![CI/CD Pipeline](github-action-success.png.png)
+
+ ### Running Application
+ ![Nginx Web App](nginx-success.png.png)
 
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
