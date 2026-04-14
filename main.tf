@@ -34,7 +34,7 @@ resource "aws_instance" "web" {
 
   key_name = "terraform-key1"
 
-  security_groups = ["Web-sg-unique"]
+  security_groups = vpc_security_group_ids = [aws_security_group.web_sg.id"]
 
   user_data = <<-EOF
               #!/bin/bash
