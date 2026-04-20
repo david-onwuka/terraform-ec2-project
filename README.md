@@ -91,6 +91,14 @@ It evolved from a basic EC2 deployment into a production-style DevOps CI/CD work
 
 ---
 
+## Challenges & Lessons Learned
+
+- Terraform requires valid AWS credentials before initialization  
+- GitHub Actions pipelines run in isolated environments  
+- Small YAML errors can break entire workflows  
+- Security group misconfiguration can block application access  
+- Debugging requires understanding each layer (CI/CD → Terraform → AWS → Docker)
+
 ## Key DevOps Concepts Practiced
 
 - Infrastructure as Code (IaC)
