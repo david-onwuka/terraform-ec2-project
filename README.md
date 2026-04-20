@@ -24,8 +24,23 @@ It evolved from a basic EC2 deployment into a production-style DevOps CI/CD work
 ---
 
 ## Architecture
- GitHub Repository | v GitHub Actions (CI/CD Pipeline) | v Terraform (IaC) | v AWS Cloud ├── EC2 Instance (t2.micro) ├── Security Group (SSH + HTTP) ├── S3 Bucket (Remote State) └── DynamoDB (State Locking) | v Docker | v Nginx Web Server (Port 80)
----
+
+GitHub Repository
+        ↓
+GitHub Actions (CI/CD Pipeline)
+        ↓
+Terraform (Infrastructure as Code)
+        ↓
+AWS Cloud
+ ├── EC2 Instance (t2.micro)
+ ├── Security Group (SSH + HTTP)
+ ├── S3 Bucket (Remote State)
+ └── DynamoDB (State Locking)
+        ↓
+Docker
+        ↓
+Nginx Web Server (Port 80)
+
 ## Tech Stack
 
 - Terraform
