@@ -47,7 +47,7 @@ resource "aws_instance" "web" {
               EOF
 
   tags = {
-    Name    = "terraform-devops-web-ec2"
+    Name    = "terraform-devops-web"
     project = "single-instance"
   }
 }
