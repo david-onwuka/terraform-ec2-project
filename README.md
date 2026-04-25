@@ -32,7 +32,7 @@ GitHub Actions (CI/CD Pipeline)
 Terraform (Infrastructure as Code)
         ↓
 AWS Cloud
- ├── EC2 Instance (t2.micro)
+ ├── EC2 Instance (provisioned via terraform module)
  ├── Security Group (SSH + HTTP)
  ├── S3 Bucket (Remote State)
  └── DynamoDB (State Locking)
@@ -41,6 +41,16 @@ Docker
         ↓
 Nginx Web Server (Port 80)
 
+## Current Architecture (Final Version)
+
+- Root Terraform configuration handles orchestration and module integration
+  
+- EC2 instances are deployed using a reusable Terraform module (modules/ec2)
+
+- GitHub Actions manages the CI/CD pipeline for automated infrastructure deployment
+  
+- AWS remote backend (S3 + DynamoDB) ensures secure state storage and locking
+  
 ## Tech Stack
 
 - Terraform
@@ -113,7 +123,21 @@ Nginx Web Server (Port 80)
 - Small YAML errors can break entire workflows  
 - Security group misconfiguration can block application access  
 - Debugging requires understanding each layer (CI/CD → Terraform → AWS → Docker)
+  
+### Real-world Debugging Experience (Module Upgrade Phase)
 
+During project refactoring into a modular Terraform architecture, several real-world DevOps issues were encountered and resolved:
+
+- Terraform state lock conflicts in DynamoDB during pipeline execution
+- Git divergence issues caused by committing from incorrect directory levels
+- CI/CD pipeline failures due to incorrect working directory configuration
+- Module recognition issues after refactoring EC2 into reusable module structure
+
+These were resolved by:
+- Aligning Git repository root with Terraform execution context
+- Proper state migration using terraform state mv
+- Restructuring project into root + module architecture
+- 
 ## Key DevOps Concepts Practiced
 
 - Infrastructure as Code (IaC)
